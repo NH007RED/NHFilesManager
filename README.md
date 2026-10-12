@@ -155,17 +155,6 @@ One bundled dependency is **not** MIT: `org.jellyfin.media3:media3-ffmpeg-decode
 <summary>v1 – v8 changelog</summary>
 
 - **v9.0.2** — Hotfix: the signing config crashed the build (`keystoreProps.getProperty("storeFile") must not be null`) whenever `app/keystore.properties` existed but was missing or had blank values for any of the four required keys (e.g. an incomplete file committed by mistake). It now checks every key individually and also confirms the keystore file itself exists, falling back to an **unsigned** release with a clear warning instead of failing the whole build — only a fully-correct `keystore.properties` enables signing now.
-- **v9.0.1** — Real, ready-to-use release keystore + `app/keystore.properties` generated and included (fixed a `rootProject.file()` path bug that pointed at the wrong folder for the keystore).
-- **v9.0** — Release-build signing config (alias/password/validity), MIT `LICENSE`, GitHub Actions CI, `CONTRIBUTING.md`, rewritten README, updated banner.
-- **v8.0.1** — Hotfix: missing `Modifier.size` import in the editor's new lock banner (`compileDebugKotlin` failure).
-- **v8.0** — "Edit text only" lock in the code editor: only quoted/string text is editable by default for recognized code files; toggle via a lock icon.
-- **v7.0.1** — Hotfix: missing `@OptIn(ExperimentalMaterial3Api::class)` on the new audio screen's `Scaffold`/`TopAppBar`.
-- **v7.0** — Background audio playback (separate from the video player's); the recognized text/code extension list greatly expanded; HTML encryption/decryption tool added.
-- **v6.0** — Scroll-to-zoom animation on every file/folder list.
-- **v5.0** — *Video Player Offline v1.4* merged in as the built-in video player (`vpo/` package); Tools tab gained **Video Player** and **All Videos**.
-- **v4.0** — Colourful bottom navigation and action-bar icons.
-- **v3.0** — Dual-pane always shows left/right (phones included), with compact rows and a Folders/Files count per pane.
-- **v2.0** — Refined typography, larger touch targets, equal-width action bars, animated screen/tab transitions and list items.
-- **v1.0** — Initial release: browsing, file operations, search, ZIP manager, APK inspector, text editor, image/video/audio/PDF viewers, storage analysis, settings.
+
 
 </details>
